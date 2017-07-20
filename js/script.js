@@ -59,9 +59,7 @@ return document.getElementById('quote-box').innerHTML = totalQuote ;
 
 }
 
-function changeColor(){
-	interval = window.setInterval( printQuote ,30000);
-}
+
 
 /* Don't display a random quote more than once until ALL quotes from the array have been displayed. To help reviewers (and yourself) verify that the quotes don’t repeat until they’ve all been displayed, 
 log the quote to the console each time the “Show Another Quote” button is clicked. 
