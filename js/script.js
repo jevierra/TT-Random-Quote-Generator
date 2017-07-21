@@ -51,6 +51,14 @@ var citation = '<span class="citation">' + co.citation + '</span>'
 var tag = '<span class="tag">' + co.tag + '</span>' 
 var year = '<span class="year">' + co.year + '</span>' 
 
+if (source == undefined){
+var source = null;
+}
+
+
+if (year == undefined){
+var year = null;
+}
 
 var totalQuote = quote += source += citation += tag += year;
 
