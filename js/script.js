@@ -46,13 +46,13 @@ function printQuote(){
 var co = getRandomQuote();
 
 var quote = '<p class="quote">' + co.quote + '</p>' 
-var source = '<span class="source">' + co.source + '</p>' 
+var source = '<span class="source">' + co.source + '</span>' 
 var citation = '<span class="citation">' + co.citation + '</span>' 
 var tag = '<span class="tag">' + co.tag + '</span>' 
 var year = '<span class="year">' + co.year + '</span>' 
 
 
-var totalQuote = quote + source + citation + tag + year;
+var totalQuote = quote += source += citation += tag += year;
 
 getRandomColor();
 

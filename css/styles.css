@@ -18,7 +18,7 @@ body {
   line-height: 1.1;
   position: relative;
   margin: 0;
-  padding-bottom:3px; /*padding bottom added to give the quote a bit more space from the source+citation+tag+date*/
+  padding-bottom:25px; /*padding bottom added to give the quote a bit more space from the source+citation+tag+date*/
   } 
 .quote:before, .quote:after {
   font-size: 6rem;
