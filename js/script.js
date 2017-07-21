@@ -4,7 +4,6 @@
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
 /* -------------------   {2} Create a function named getRandomQuote which: ----------------------------------
 	 •	selects a random quote object from the quotes array
 	 •	returns the randomly selected quote object 
@@ -41,46 +40,19 @@ function getRandomColor() {
 
 	
  ----------------------------------------------------------------------------------------------------------------------   */
-var totalQuote;
+
 
 function printQuote(){
 var co = getRandomQuote();
 
-
-
-
 var quote = '<p class="quote">' + co.quote + '</p>' 
-
-totalQuote += quote;
-
-
-var source = '<span class="source">' + co.source + '</span>' 
-/*var citation = '<span class="citation">' + co.citation + '</span>' */
-
-totalQuote += source;
+var source = '<span class="source">' + co.source + '</p>' 
+var citation = '<span class="citation">' + co.citation + '</span>' 
+var tag = '<span class="tag">' + co.tag + '</span>' 
+var year = '<span class="year">' + co.year + '</span>' 
 
 
-	if (co.citation != undefined || co.citation !== null){
-	var citation = co.citation;
-	totalQuote += citation;
-	} else{
-	console.log('no citation found'); //not needed but a nice notification
-	}
-
-var tag = '<span class="tag">' + co.tag + '</span>'
-
-totalQuote += tag;
-
-
-if (co.year != undefined || co.year !== null){
-	var year = co.year;
-	totalQuote += year;
-	} else{
-	console.log('no citation found'); //not needed but a nice notification
-	}
-
-
-
+var totalQuote = quote + source + citation + tag + year;
 
 getRandomColor();
 
@@ -88,9 +60,9 @@ return document.getElementById('quote-box').innerHTML = totalQuote ;
 
 }
 
-
-
 /* Don't display a random quote more than once until ALL quotes from the array have been displayed. To help reviewers (and yourself) verify that the quotes don’t repeat until they’ve all been displayed, 
 log the quote to the console each time the “Show Another Quote” button is clicked. 
 Refresh the quote after a set amount of time. For example, every 30 seconds, make a new quote appear. 
 (You can use the setInterval() or setTimeout() method to do this -- see the links in the “Additional Resources” section*/
+
+
