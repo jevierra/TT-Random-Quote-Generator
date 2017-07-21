@@ -12,7 +12,7 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 -------------------------------------------------------------------------------------------------------------*/
 
 function getRandomQuote(){
-var rnum = Math.floor(Math.random() * quotes.length) +1 ;
+var rnum = Math.floor(Math.random() * quotes.length) ;
 
 return quotes[rnum]
 
@@ -51,14 +51,7 @@ var citation = '<span class="citation">' + co.citation + '</span>'
 var tag = '<span class="tag">' + co.tag + '</span>' 
 var year = '<span class="year">' + co.year + '</span>' 
 
-if (source == undefined){
-var source = null;
-}
-
-
-if (year == undefined){
-var year = null;
-}
+if(co.source){ quote+= '<span class="source">' + co.source + '</span>' }
 
 var totalQuote = quote += source += citation += tag += year;
 
@@ -68,9 +61,12 @@ return document.getElementById('quote-box').innerHTML = totalQuote ;
 
 }
 
-/* Don't display a random quote more than once until ALL quotes from the array have been displayed. To help reviewers (and yourself) verify that the quotes don’t repeat until they’ve all been displayed, 
+/* 
+Exceed stuff
+Don't display a random quote more than once until ALL quotes from the array have been displayed. To help reviewers (and yourself) verify that the quotes don’t repeat until they’ve all been displayed, 
 log the quote to the console each time the “Show Another Quote” button is clicked. 
 Refresh the quote after a set amount of time. For example, every 30 seconds, make a new quote appear. 
-(You can use the setInterval() or setTimeout() method to do this -- see the links in the “Additional Resources” section*/
+(You can use the setInterval() or setTimeout() method to do this -- see the links in the “Additional Resources” section
+*/
 
 
