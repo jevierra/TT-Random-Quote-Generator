@@ -45,7 +45,7 @@ var quotes = [
 	quote:'Where there is life, there is hope',
 	source: 'Grover',
 	citation: ' Sesame Street',
-	tag: 'Hope ',
+	tag: '',  //left blank for testing.
 	year: 1969
 }
 ];

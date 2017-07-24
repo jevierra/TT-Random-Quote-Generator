@@ -42,6 +42,7 @@ function getRandomColor() {
  ----------------------------------------------------------------------------------------------------------------------   */
 
 
+/*
 function printQuote(){
 var co = getRandomQuote();
 
@@ -60,6 +61,35 @@ getRandomColor();
 return document.getElementById('quote-box').innerHTML = totalQuote ;
 
 }
+*/
+
+/* New revision of the printQuote function to fix my printQuote doesn't add a for a missing citation or a if the year property is missing (Completed)
+Issue */
+
+function printQuote() {
+
+var co = getRandomQuote(); 
+
+  var totalQuote = '<p class="quote">' + co.quote + '</p>';
+	 
+	 if(co.source)
+	 	{ totalQuote += '<span class="source">' + co.source + '</span>';}
+     
+     if(co.citation)
+     	{totalQuote += '<span class="citation">' + co.citation + '</span>';}
+
+     if(co.tag)
+     	{totalQuote += '<span class="tag">' + co.tag + '</span>';}
+ 
+     if(co.year)
+     	{totalQuote += '<span class="year">' + co.year + '</span>';}	 
+
+     getRandomColor();
+
+return document.getElementById('quote-box').innerHTML = totalQuote ; 
+
+}
+
 
 /* 
 Exceed stuff
